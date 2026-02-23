@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block title %}AI Vibe Coding — Design B · Split Panel{% endblock %}
+
+{% block fonts %}
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/design_b.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- Mobile topbar (only shows below 900px) -->
+<div class="topbar">
+  <div class="topbar-logo">⚡ AI Maker</div>
+  <a href="#consult" class="topbar-cta">Enroll Free</a>
+</div>
+
+<div class="page">
+
+  <!-- ── STICKY SIDEBAR ───────────────────────────── -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-avatar">🧑‍💻</div>
+      <div class="sidebar-name">AI Maker</div>
+      <div class="sidebar-title">Vibe Coding Instructor</div>
+      <div class="sidebar-badge">✦ AI Product Builder</div>
+    </div>
+
+    <div class="sidebar-stats">
+      <div class="s-stat">
+        <span class="s-stat-num">500+</span>
+        <span class="s-stat-label">Students</span>
+      </div>
+      <div class="s-stat">
+        <span class="s-stat-num">4.9★</span>
+        <span class="s-stat-label">Rating</span>
+      </div>
+      <div class="s-stat">
+        <span class="s-stat-num">1hr</span>
+        <span class="s-stat-label">Deploy</span>
+      </div>
+    </div>
+
+    <p class="sidebar-bio">
+      Former engineer turned educator. I've helped 500+ students launch real products using AI tools —
+      no CS degree required. My students deploy in under an hour, every time.
+    </p>
+
+    <div class="sidebar-tags">
+      <span class="s-tag">Claude Code</span>
+      <span class="s-tag">Prompt Engineering</span>
+      <span class="s-tag">Vercel</span>
+      <span class="s-tag">AI Products</span>
+      <span class="s-tag">No-Code</span>
+    </div>
+
+    <a href="#consult" class="sidebar-cta">Start Building Your Own App Now →</a>
+  </aside>
+
+  <!-- ── MAIN SCROLLABLE CONTENT ──────────────────── -->
+  <main class="main">
+
+    <!-- Intro -->
+    <div class="content-section">
+      <div class="section-tag">About This Course</div>
+      <h1 class="section-title">
+        Teaching You How to Become a Service Owner Without Knowing a Line of Code
+      </h1>
+      <p class="section-subtitle">
+        A Practical Guide to Vibe Coding Using AI — master AI tools like Claude Code to design,
+        build, and ship real services in under an hour. No algorithms. No frameworks. Just your idea
+        and the right prompts.
+      </p>
+    </div>
+
+    <!-- Curriculum -->
+    <div class="content-section alt" id="curriculum">
+      <div class="section-tag">Curriculum</div>
+      <h2 class="section-title">From Zero to Deployed in One Hour</h2>
+      <p class="section-subtitle">Four practical steps, each building directly on the last.</p>
+
+      <div class="steps-list">
+
+        <div class="step-item reveal">
+          <div class="step-icon-col">
+            <div class="step-circle">
+              <span class="step-num-badge">1</span>
+              🛠️
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-body">
+            <div class="step-title">AI Tool Setup</div>
+            <p class="step-desc">Configure Claude Code, Cursor, and Vercel in your environment. Get your complete AI development stack ready — in minutes, not days.</p>
+          </div>
+        </div>
+
+        <div class="step-item reveal reveal-delay-1">
+          <div class="step-icon-col">
+            <div class="step-circle">
+              <span class="step-num-badge">2</span>
+              ✍️
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-body">
+            <div class="step-title">Prompt Design</div>
+            <p class="step-desc">Learn the craft of writing prompts that generate production-ready code. Turn your rough ideas into precise, actionable AI instructions.</p>
+          </div>
+        </div>
+
+        <div class="step-item reveal reveal-delay-2">
+          <div class="step-icon-col">
+            <div class="step-circle">
+              <span class="step-num-badge">3</span>
+              🏗️
+            </div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-body">
+            <div class="step-title">Practical Website Building</div>
+            <p class="step-desc">Build a real, functional web service from scratch using AI assistance. See your product come to life in real time — no waiting, no guessing.</p>
+          </div>
+        </div>
+
+        <div class="step-item reveal reveal-delay-3">
+          <div class="step-icon-col">
+            <div class="step-circle">
+              <span class="step-num-badge">4</span>
+              🚀
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-title">Vercel Lightning-Speed Deployment</div>
+            <p class="step-desc">Deploy to a live URL in minutes. We use Vercel's instant deployment pipeline so your users can access your product before the session ends.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="content-section" id="features">
+      <div class="section-tag">Key Features</div>
+      <h2 class="section-title">A Smart Development Experience</h2>
+      <p class="section-subtitle">
+        AI automatically verifies your app — even without SDLC knowledge. You focus on the vision.
+      </p>
+
+      <div class="feature-list">
+
+        <div class="feature-item reveal">
+          <div class="feature-icon">🤖</div>
+          <div>
+            <div class="feature-title">No SDLC Knowledge Required</div>
+            <p class="feature-desc">AI handles the full software development lifecycle — architecture, testing, CI/CD pipelines. You focus purely on your product vision and user experience.</p>
+          </div>
+        </div>
+
+        <div class="feature-item reveal reveal-delay-1">
+          <div class="feature-icon">✅</div>
+          <div>
+            <div class="feature-title">Automatic App Verification</div>
+            <p class="feature-desc">Claude Code continuously reviews your app for quality, security, and performance — catching issues before they reach production. Every deploy is clean.</p>
+          </div>
+        </div>
+
+        <div class="feature-item reveal reveal-delay-2">
+          <div class="feature-icon">⚡</div>
+          <div>
+            <div class="feature-title">1-Hour to Live URL</div>
+            <p class="feature-desc">From blank screen to live product in under 60 minutes. Our workflow removes every unnecessary step between your idea and your users.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="content-section alt" id="reviews">
+      <div class="section-tag">Student Stories</div>
+      <h2 class="section-title">Real Results from Real People</h2>
+
+      <div class="reviews-list">
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "I launched my first SaaS product in 2 hours. Never wrote a single line of code myself.
+            This course completely changed how I think about building products."
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">S</div>
+            <div>
+              <div class="reviewer-name">Sarah J.</div>
+              <div class="reviewer-role">Founder, ProductLab</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal reveal-delay-1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The AI verification is mind-blowing. My app was production-ready the moment I deployed.
+            No last-minute debugging, no panics. Just a clean, working product."
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">M</div>
+            <div>
+              <div class="reviewer-name">Marcus T.</div>
+              <div class="reviewer-role">Product Manager, TechCorp</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal reveal-delay-2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Finally a course that delivers. I built my design portfolio site in one afternoon.
+            My freelance rate doubled within a month of launching it."
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">J</div>
+            <div>
+              <div class="reviewer-name">Jenny L.</div>
+              <div class="reviewer-role">UX Designer & Freelancer</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="content-section cta-section" id="consult">
+      <div class="cta-inner">
+        <div class="cta-eyebrow">Get Started Today</div>
+        <h2 class="cta-title">Ready to Build Your Own Service?</h2>
+        <p class="cta-subtitle">
+          Join 500+ students who've already launched their first product.
+          No coding experience required.
+        </p>
+        <a href="#" class="cta-btn">Start Building Your Own App Now →</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="content-footer">
+      <p>© 2025 AI Maker · A Practical Guide to Vibe Coding Using AI</p>
+      <p style="margin-top:0.5rem">
+        <a href="/">← Back to Designs</a> &nbsp;·&nbsp;
+        <a href="/design-a">Design A</a> &nbsp;·&nbsp;
+        <a href="/design-c">Design C</a>
+      </p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+{% endblock %}

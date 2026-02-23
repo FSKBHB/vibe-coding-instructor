@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block title %}AI Vibe Coding — Design C · Dashboard{% endblock %}
+
+{% block fonts %}
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/design_c.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ── TOP BANNER ────────────────────────────────── -->
+<header class="banner">
+  <div class="banner-inner">
+    <a href="/" class="banner-logo">
+      <span class="banner-logo-dot"></span>
+      AI MAKER
+    </a>
+    <nav>
+      <ul class="banner-nav">
+        <li><a href="#instructor">Instructor</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </nav>
+    <a href="#consult" class="banner-cta">Enroll Free</a>
+  </div>
+</header>
+
+<!-- ── HERO STRIP ────────────────────────────────── -->
+<div class="hero-strip">
+  <div class="hero-strip-inner">
+    <div class="hero-text">
+      <div class="hero-kicker"><span class="hero-kicker-dot"></span>New Course · 2025</div>
+      <h1 class="hero-title">
+        Vibe Coding<br>
+        <span>With AI</span>
+      </h1>
+      <p class="hero-subtitle">
+        Build real services in under an hour — no code required.
+        Claude Code does the heavy lifting. You own the product.
+      </p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat-pill">
+        <div class="hero-stat-val">500+</div>
+        <div class="hero-stat-lbl">Students Enrolled</div>
+      </div>
+      <div class="hero-stat-pill">
+        <div class="hero-stat-val">4.9★</div>
+        <div class="hero-stat-lbl">Average Rating</div>
+      </div>
+      <div class="hero-stat-pill">
+        <div class="hero-stat-val">1HR</div>
+        <div class="hero-stat-lbl">Avg. First Deploy</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── DASHBOARD GRID ────────────────────────────── -->
+<div class="dashboard">
+
+  <!-- Instructor Card -->
+  <div class="card card-instructor reveal" id="instructor">
+    <div class="card-inner">
+      <div class="instructor-visual">
+        <div class="instructor-emoji">🧑‍💻</div>
+        <div class="instructor-label">AI MAKER</div>
+        <div class="instructor-sublabel">Vibe Coding Instructor</div>
+      </div>
+      <div class="instructor-body">
+        <div class="card-tag">Meet Your Instructor</div>
+        <blockquote class="instructor-quote">
+          "Anyone can become a service owner. You don't need algorithms — you need the right tools."
+        </blockquote>
+        <p class="instructor-bio">
+          Former engineer turned educator. I've helped 500+ students launch real digital products
+          using AI tools — SaaS apps, booking systems, portfolios — without traditional coding.
+          My students ship their first product in under 60 minutes, every time.
+        </p>
+        <div class="tags">
+          <span class="tag">Claude Code</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Vercel Deployment</span>
+          <span class="tag">No-Code → Pro</span>
+          <span class="tag">AI Products</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Stats Card -->
+  <div class="card card-quick-stats dark reveal reveal-delay-1">
+    <div class="card-pad">
+      <div class="card-tag">Course Stats</div>
+      <div class="card-title" style="margin-bottom:1.5rem">By the Numbers</div>
+      <div class="stat-grid">
+        <div class="stat-box accent">
+          <div class="stat-val">500+</div>
+          <div class="stat-label">Students</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">4.9★</div>
+          <div class="stat-label">Rating</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">1HR</div>
+          <div class="stat-label">To Deploy</div>
+        </div>
+        <div class="stat-box accent">
+          <div class="stat-val">0</div>
+          <div class="stat-label">Code Lines Needed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Curriculum Card -->
+  <div class="card card-curriculum reveal" id="curriculum">
+    <div class="card-pad">
+      <div class="card-tag">Curriculum</div>
+      <h2 class="card-title">Zero to Deployed in One Hour</h2>
+      <div class="curriculum-list">
+
+        <div class="c-step">
+          <div class="c-num">01</div>
+          <div class="c-icon">🛠️</div>
+          <div>
+            <div class="c-title">AI Tool Setup</div>
+            <p class="c-desc">Configure Claude Code, Cursor & Vercel. Full AI stack in minutes.</p>
+          </div>
+        </div>
+
+        <div class="c-step">
+          <div class="c-num">02</div>
+          <div class="c-icon">✍️</div>
+          <div>
+            <div class="c-title">Prompt Design</div>
+            <p class="c-desc">Write prompts that generate production-ready code every time.</p>
+          </div>
+        </div>
+
+        <div class="c-step">
+          <div class="c-num">03</div>
+          <div class="c-icon">🏗️</div>
+          <div>
+            <div class="c-title">Practical Website Building</div>
+            <p class="c-desc">Build a real, functional service from scratch with AI guidance.</p>
+          </div>
+        </div>
+
+        <div class="c-step">
+          <div class="c-num">04</div>
+          <div class="c-icon">🚀</div>
+          <div>
+            <div class="c-title">Vercel Lightning Deployment</div>
+            <p class="c-desc">Live URL in minutes. From local machine to production seamlessly.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Card -->
+  <div class="card card-features reveal reveal-delay-1" id="features">
+    <div class="card-pad">
+      <div class="card-tag">Key Features</div>
+      <h2 class="card-title">A Smart Development Experience</h2>
+      <p class="card-sub" style="margin-bottom:1.25rem">AI automatically verifies your app — even without SDLC knowledge.</p>
+
+      <div class="features-grid">
+        <div class="f-item">
+          <div class="f-icon">🤖</div>
+          <div>
+            <div class="f-title">No SDLC Knowledge Required</div>
+            <p class="f-desc">AI handles architecture, testing strategies, and deployment pipelines automatically. Focus on your vision — not the lifecycle.</p>
+          </div>
+        </div>
+        <div class="f-item">
+          <div class="f-icon">✅</div>
+          <div>
+            <div class="f-title">Automatic App Verification</div>
+            <p class="f-desc">Claude Code reviews code quality, security, and performance before every deploy. Every build is production-ready.</p>
+          </div>
+        </div>
+        <div class="f-item">
+          <div class="f-icon">⚡</div>
+          <div>
+            <div class="f-title">1-Hour to Launch</div>
+            <p class="f-desc">From blank screen to live URL in under 60 minutes. No unnecessary steps between your idea and your product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reviews Card -->
+  <div class="card card-reviews reveal" id="reviews">
+    <div class="card-pad">
+      <div class="card-tag">Student Stories</div>
+      <h2 class="card-title">Real Results from Real People</h2>
+
+      <div class="reviews-row">
+        <div class="r-card">
+          <div class="r-stars">★★★★★</div>
+          <p class="r-text">"I launched my first SaaS product in 2 hours. Never wrote a single line of code. This course completely changed how I think about building products."</p>
+          <div class="r-person">
+            <div class="r-avatar">S</div>
+            <div>
+              <div class="r-name">Sarah J.</div>
+              <div class="r-role">Founder, ProductLab</div>
+            </div>
+          </div>
+        </div>
+        <div class="r-card">
+          <div class="r-stars">★★★★★</div>
+          <p class="r-text">"The AI verification is mind-blowing. My app was production-ready the moment I deployed it. No last-minute debugging panics whatsoever."</p>
+          <div class="r-person">
+            <div class="r-avatar">M</div>
+            <div>
+              <div class="r-name">Marcus T.</div>
+              <div class="r-role">Product Manager, TechCorp</div>
+            </div>
+          </div>
+        </div>
+        <div class="r-card">
+          <div class="r-stars">★★★★★</div>
+          <p class="r-text">"Finally a course that delivers. Built my design portfolio in one afternoon. My freelance rate doubled within a month of launching it."</p>
+          <div class="r-person">
+            <div class="r-avatar">J</div>
+            <div>
+              <div class="r-name">Jenny L.</div>
+              <div class="r-role">UX Designer & Freelancer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Card -->
+  <div class="card card-cta reveal" id="consult">
+    <div class="cta-inner">
+      <div class="cta-pre">Get Started Today</div>
+      <h2 class="cta-title">Ready to Build Your Own Service?</h2>
+      <p class="cta-sub">
+        Join 500+ students who've already launched their first product.
+        No coding experience required. Just your idea.
+      </p>
+      <a href="#" class="cta-btn">Start Building Your Own App Now →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ────────────────────────────────────── -->
+<footer class="footer">
+  <p>© 2025 AI Maker · A Practical Guide to Vibe Coding Using AI &nbsp;·&nbsp;
+    <a href="/">← Back to Designs</a> &nbsp;·&nbsp;
+    <a href="/design-a">Design A</a> &nbsp;·&nbsp;
+    <a href="/design-b">Design B</a>
+  </p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+{% endblock %}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design References — AI Vibe Coding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #003366;
+      --blue: #0066CC;
+      --white: #FFFFFF;
+      --gray: #F4F7FC;
+      --border: #E2EAF4;
+      --text: #1A2B3C;
+      --muted: #6B7A8D;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--gray);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .header {
+      background: var(--navy);
+      padding: 3.5rem 5% 4rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+      background-size: 32px 32px;
+    }
+    .header-tag {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 0.3rem 1rem; border-radius: 100px;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .header h1 {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      font-weight: 800; line-height: 1.1;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    .header p {
+      font-size: 1rem; opacity: 0.65;
+      max-width: 500px; margin: 0 auto;
+      line-height: 1.7; position: relative;
+    }
+    .container {
+      max-width: 1200px; margin: 0 auto;
+      padding: 3.5rem 5%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,51,102,0.12);
+    }
+    .preview {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Design A preview — editorial navy */
+    .preview-a {
+      background: linear-gradient(150deg, #001A40 0%, #003366 55%, #0052A3 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 8px; padding: 2rem;
+    }
+    .preview-a .mock-tag {
+      width: 120px; height: 8px;
+      background: rgba(201,168,76,0.6); border-radius: 4px;
+    }
+    .preview-a .mock-h1 {
+      width: 220px; height: 16px;
+      background: rgba(255,255,255,0.85); border-radius: 4px;
+    }
+    .preview-a .mock-h1-2 {
+      width: 180px; height: 16px;
+      background: rgba(255,255,255,0.55); border-radius: 4px;
+    }
+    .preview-a .mock-sub {
+      width: 160px; height: 8px;
+      background: rgba(255,255,255,0.3); border-radius: 4px;
+      margin-top: 4px;
+    }
+    .preview-a .mock-btn {
+      width: 140px; height: 36px;
+      background: white; border-radius: 8px;
+      margin-top: 12px;
+    }
+    /* Design B preview — split panel */
+    .preview-b {
+      display: grid; grid-template-columns: 40% 60%;
+      height: 220px;
+    }
+    .preview-b .sidebar-mock {
+      background: linear-gradient(160deg, #001A40, #003366);
+      padding: 1.5rem 1rem;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .preview-b .avatar-mock {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.35);
+      margin-bottom: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .preview-b .name-mock { width: 72px; height: 8px; background: rgba(255,255,255,0.8); border-radius: 4px; }
+    .preview-b .title-mock { width: 56px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 4px; }
+    .preview-b .stat-row { display: flex; gap: 8px; margin-top: 8px; }
+    .preview-b .stat-box { width: 28px; height: 28px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; }
+    .preview-b .main-mock {
+      background: #FEFCF9;
+      padding: 1.5rem 1rem;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .preview-b .section-label { width: 60px; height: 6px; background: #C9A84C; border-radius: 4px; }
+    .preview-b .content-line { height: 8px; background: #E8E2D8; border-radius: 4px; }
+    .preview-b .content-line.w80 { width: 80%; }
+    .preview-b .content-line.w60 { width: 60%; }
+    .preview-b .content-line.w70 { width: 70%; }
+    .preview-b .steps { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+    .preview-b .step { display: flex; align-items: center; gap: 6px; }
+    .preview-b .step-dot { width: 12px; height: 12px; border-radius: 50%; background: #003366; flex-shrink: 0; }
+    .preview-b .step-line { flex: 1; height: 6px; background: #E8E2D8; border-radius: 4px; }
+    /* Design C preview — bento grid */
+    .preview-c {
+      background: #F0F4FA;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: auto auto;
+      gap: 8px;
+    }
+    .preview-c .banner {
+      grid-column: 1 / -1;
+      background: #003366;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .preview-c .banner-title { width: 180px; height: 12px; background: rgba(255,255,255,0.9); border-radius: 3px; }
+    .preview-c .banner-sub { width: 120px; height: 7px; background: rgba(255,255,255,0.35); border-radius: 3px; }
+    .preview-c .card-box {
+      background: white; border-radius: 10px;
+      padding: 0.75rem; box-shadow: 0 2px 8px rgba(0,51,102,0.08);
+    }
+    .preview-c .card-label { width: 60px; height: 6px; background: #0066CC; border-radius: 3px; margin-bottom: 8px; }
+    .preview-c .card-lines { display: flex; flex-direction: column; gap: 5px; }
+    .preview-c .card-line { height: 7px; background: #E2EAF4; border-radius: 3px; }
+    .preview-c .card-line.w90 { width: 90%; }
+    .preview-c .card-line.w70 { width: 70%; }
+    .preview-c .card-line.w80 { width: 80%; }
+    .preview-c .card-dark { background: #003366; }
+    .preview-c .card-dark .card-label { background: rgba(255,255,255,0.3); }
+    .preview-c .card-dark .card-line { background: rgba(255,255,255,0.12); }
+    .card-body {
+      padding: 2rem;
+    }
+    .design-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--blue); margin-bottom: 0.75rem;
+    }
+    .design-label .badge {
+      background: var(--navy);
+      color: white; width: 22px; height: 22px;
+      border-radius: 6px; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 800;
+    }
+    .card-title {
+      font-size: 1.25rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .card-desc {
+      font-size: 0.875rem; color: var(--muted);
+      line-height: 1.7; margin-bottom: 1.5rem;
+    }
+    .traits {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+      margin-bottom: 1.75rem;
+    }
+    .trait {
+      background: var(--gray);
+      color: var(--navy); font-size: 0.72rem;
+      font-weight: 600; padding: 0.25rem 0.65rem;
+      border-radius: 100px; border: 1px solid var(--border);
+    }
+    .btn {
+      display: block; width: 100%;
+      background: var(--navy); color: white;
+      padding: 0.75rem 1.5rem; border-radius: 10px;
+      font-size: 0.875rem; font-weight: 700;
+      text-decoration: none; text-align: center;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover { background: #004888; transform: translateY(-1px); }
+    .footer-note {
+      text-align: center; margin-top: 2.5rem;
+      color: var(--muted); font-size: 0.825rem; line-height: 1.7;
+    }
+    .footer-note strong { color: var(--navy); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-tag">Design References</div>
+    <h1>Three Layout Options for Your Instructor Page</h1>
+    <p>Browse all three designs, then tell me which direction feels right for your AI Vibe Coding course.</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+
+      <!-- Design A -->
+      <div class="card">
+        <div class="preview preview-a">
+          <div class="mock-tag"></div>
+          <div class="mock-h1"></div>
+          <div class="mock-h1-2"></div>
+          <div class="mock-sub"></div>
+          <div class="mock-btn"></div>
+        </div>
+        <div class="card-body">
+          <div class="design-label"><span class="badge">A</span> Editorial Luxury</div>
+          <h2 class="card-title">Classic Authority Landing Page</h2>
+          <p class="card-desc">
+            Serif typography meets deep navy prestige. A full-width hero, editorial section headers,
+            and generous whitespace give this an authoritative, academic quality — like a premium
+            masterclass platform.
+          </p>
+          <div class="traits">
+            <span class="trait">Cormorant Garamond + Mulish</span>
+            <span class="trait">Editorial feel</span>
+            <span class="trait">Gold accents</span>
+            <span class="trait">Best for trust</span>
+          </div>
+          <a href="/design-a" class="btn">View Design A →</a>
+        </div>
+      </div>
+
+      <!-- Design B -->
+      <div class="card">
+        <div class="preview preview-b">
+          <div class="sidebar-mock">
+            <div class="avatar-mock">🧑‍💻</div>
+            <div class="name-mock"></div>
+            <div class="title-mock"></div>
+            <div class="stat-row">
+              <div class="stat-box"></div>
+              <div class="stat-box"></div>
+              <div class="stat-box"></div>
+            </div>
+          </div>
+          <div class="main-mock">
+            <div class="section-label"></div>
+            <div class="steps">
+              <div class="step"><div class="step-dot"></div><div class="step-line"></div></div>
+              <div class="step"><div class="step-dot"></div><div class="step-line"></div></div>
+              <div class="step"><div class="step-dot"></div><div class="step-line"></div></div>
+              <div class="step"><div class="step-dot"></div><div class="step-line"></div></div>
+            </div>
+            <div class="content-line w80" style="margin-top:8px"></div>
+            <div class="content-line w60"></div>
+            <div class="content-line w70"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="design-label"><span class="badge">B</span> Intimate Split-Panel</div>
+          <h2 class="card-title">Coaching Portfolio Layout</h2>
+          <p class="card-desc">
+            A sticky sidebar keeps the instructor profile visible as visitors scroll through the content.
+            Warm tones and an optical serif font create a personal, one-on-one coaching atmosphere —
+            like a private consultation page.
+          </p>
+          <div class="traits">
+            <span class="trait">Fraunces + Plus Jakarta Sans</span>
+            <span class="trait">Sticky sidebar</span>
+            <span class="trait">Warm & intimate</span>
+            <span class="trait">Portfolio feel</span>
+          </div>
+          <a href="/design-b" class="btn">View Design B →</a>
+        </div>
+      </div>
+
+      <!-- Design C -->
+      <div class="card">
+        <div class="preview preview-c">
+          <div class="banner">
+            <div class="banner-title"></div>
+            <div class="banner-sub"></div>
+          </div>
+          <div class="card-box">
+            <div class="card-label"></div>
+            <div class="card-lines">
+              <div class="card-line w90"></div>
+              <div class="card-line w70"></div>
+              <div class="card-line w80"></div>
+            </div>
+          </div>
+          <div class="card-box card-dark">
+            <div class="card-label"></div>
+            <div class="card-lines">
+              <div class="card-line w80"></div>
+              <div class="card-line w60"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="design-label"><span class="badge">C</span> Bold Dashboard</div>
+          <h2 class="card-title">Bento Grid Command Center</h2>
+          <p class="card-desc">
+            A full-width dark header banner anchors an asymmetric bento card grid below.
+            Geometric display type and a dense, information-rich layout give this a modern
+            SaaS product aesthetic — bold, techy, and confident.
+          </p>
+          <div class="traits">
+            <span class="trait">Bebas Neue + Outfit</span>
+            <span class="trait">Bento grid</span>
+            <span class="trait">Bold & techy</span>
+            <span class="trait">Dashboard feel</span>
+          </div>
+          <a href="/design-c" class="btn">View Design C →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="footer-note">
+      All three designs use the same content. Routes: <strong>/design-a</strong> · <strong>/design-b</strong> · <strong>/design-c</strong><br>
+      Tell me which one resonates and we'll refine it together.
+    </p>
+  </div>
+</body>
+</html>
